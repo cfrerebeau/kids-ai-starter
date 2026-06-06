@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "tone": "casual",
+  "language": "en",
+  "xp": 0,
+  "level": "Apprentice",
+  "concept_badges": [],
+  "behavior_badges": [],
+  "counters": {
+    "turns_since_kid_typed": 0,
+    "questions_asked_total": 0,
+    "questions_asked_this_session": 0,
+    "explain_mode_off": false,
+    "restraint_override_until": null,
+    "code_lines_generated_this_session": 0
+  },
+  "current_quest_id": null,
+  "current_track": "mixed",
+  "shipped": []
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hello, world</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 { font-size: 3rem; margin: 0; }
+    p { color: #94a3b8; }
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background: #0ea5e9;
+      color: white;
+      border: 0;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    button:hover { background: #0284c7; }
+    #count { font-weight: bold; color: #fde047; }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Hello, world.</h1>
+    <p>You opened a file. Your browser turned the code into pixels.</p>
+    <p>You clicked the button <span id="count">0</span> times.</p>
+    <!-- TODO(you): change the button text below. Open this file in a code editor, find this line, change "Click me", save, reload. -->
+    <button onclick="bump()">Click me</button>
+  </div>
+  <script>
+    let n = 0;
+    function bump() {
+      n += 1;
+      document.getElementById('count').textContent = n;
+    }
+  </script>
+</body>
+</html>

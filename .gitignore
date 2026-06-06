@@ -1,0 +1,28 @@
+# A kid's personal profile and state — NEVER commit by default.
+# Minors should not have their name, age, goals, and behavior counters
+# pushed to a public repo. If a family chooses to opt in, comment these
+# two lines out and accept the risk (documented in PARENTS.md).
+me.md
+me.json
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Kid's private scratch
+local/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
