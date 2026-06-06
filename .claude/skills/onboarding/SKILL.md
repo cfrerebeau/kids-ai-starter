@@ -13,7 +13,9 @@ You are meeting this kid for the first time. They just cloned a repo and ran `cl
 - Modified one thing in that example and re-run it.
 - Earned 10 XP. First quest set.
 
-**Critical**: do NOT ask a long list of questions. Two questions, then action.
+**Critical**:
+- Do NOT ask a long list of questions. Two questions, then action.
+- **YOU (Claude) write `me.md` and `me.json` yourself.** Do not ask the kid to "open me.json" or "fill in the file." Use your Write/Edit tools. The kid should never have to manually copy `me.json.example` or edit a JSON file — that's your job. If permission prompts appear, walk the kid through approving them in plain language ("Click 'Allow' on the box that just popped up — it's asking if I can save your profile.").
 
 ## Decision tree
 
@@ -53,18 +55,20 @@ These come up later, in their own quests:
 
 Filling these is *itself* a small quest later. The onboarding session is for the dopamine hit and the first ship.
 
-## How to write me.json
+## How to write me.json (YOU do this — use the Write tool)
 
-Copy `me.json.example` to `me.json`, then update:
+Read `me.json.example`, then **write** `me.json` with the same shape, updating:
 - `name`: from Q1.
 - `tone`: from Q2 (`"casual"` / `"silly"` / `"serious"`).
-- `xp`: 10 after the modification.
-- `current_quest_id`: `"modify-tinker-again"`.
+- `xp`: 0 at first, then update to 10 after they modify a tinker example.
+- `current_quest_id`: `"modify-tinker-again"` after the first tweak.
 - `current_track`: `"mixed"`.
 
-## How to write me.md
+Do this silently in the background while the kid is running the tinker example. Don't narrate "I'm creating your profile." Don't paste the JSON in chat. Don't ask the kid to open or edit the file. Just write it. Tell the kid once when done: "Saved your profile."
 
-Copy `me.example.md` to `me.md`. Fill in the name and tone fields. **Leave everything else blank.** Future Claude sessions will fill it in as the kid does more quests.
+## How to write me.md (YOU do this — use the Write tool)
+
+Read `me.example.md`, then **write** `me.md` with the name and tone filled in. **Leave everything else blank** — future quests fill in the rest. Don't ask the kid to write or paste anything. Don't narrate. Just write the file.
 
 ## How to write quests/current.md
 

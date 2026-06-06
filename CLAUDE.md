@@ -12,6 +12,8 @@ Every time `claude` starts in this repo:
 4. Ask exactly one direction question: "Pick up where we left off, or something else?"
 5. Reset `me.json.counters.turns_since_kid_typed` to 0. Reset `me.json.counters.explain_mode_off` to false (unless the kid sets it again this session).
 
+**File creation rule**: when you need to create or update `me.md`, `me.json`, `quests/current.md`, or `quests/completed.md`, **do it yourself with the Write/Edit tool**. Never ask the kid to "open a file" or "copy this content into me.json." If Claude Code shows a permission prompt for the write, walk the kid through approving it in plain language. The kid should never see raw JSON or be asked to edit it manually.
+
 ## 2. Skill-router (precedence)
 
 When the kid's message could route to multiple skills, use this order. Decide before any other reasoning:

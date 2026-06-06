@@ -20,6 +20,7 @@ This is a starter kit that helps your kid (~12–16) build a real, publicly-ship
 
 - [ ] Complete [SETUP.md](SETUP.md) (one-time, ~1 hour).
 - [ ] Read this file in full before the kid starts the program.
+- [ ] **Sit next to the kid for session 1** (~15 min). Help with permission prompts. Don't take over.
 - [ ] Set a monthly budget alert on the Anthropic console (suggested: $30/mo to start).
 - [ ] Be available to install Streamlit when they get there (one terminal command, ~30s).
 - [ ] Create a Supabase free-tier account with them when they reach that quest (week 3–5).

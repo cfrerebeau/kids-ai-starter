@@ -115,14 +115,20 @@ If missing:
 
    *On Mac, if `code .` says "command not found"*: open VS Code → Command Palette (`Cmd+Shift+P`) → type "Shell Command: Install 'code' command in PATH" → run it. Then retry.
 
-## Step 8 — Hand off
+## Step 8 — Sit with the kid for session 1
 
-The kid:
-1. Opens VS Code (if not already).
-2. **If you installed the extension (Path A)**: clicks the Claude icon in the sidebar to open the Claude panel. Says hi.
-3. **If you installed the CLI (Path B)**: opens a terminal inside VS Code (`View → Terminal` or `` Ctrl+` `` / `` Cmd+` ``). Types `claude`.
+**Plan to be next to the kid for their first session (~15 minutes).** Not because they can't do it — because:
 
-After that they're off. `START_HERE.md` walks them through it.
+- Claude Code will likely show **permission prompts** the first time it tries to write files (it's asking "can I save your profile?"). The kid needs to click "Allow." Walk them through the first one.
+- Anything weird in the install will surface here. Easier to fix together than via screenshot later.
+- This is the moment that sets the relationship — they associate the program with you being interested, not with homework.
+
+Then:
+1. The kid opens VS Code (if not already).
+2. **Path A (extension)**: they click the Claude icon in the sidebar to open the Claude panel. Say hi.
+3. **Path B (CLI)**: they open a terminal inside VS Code (`View → Terminal` or `` Ctrl+` `` / `` Cmd+` ``). Type `claude`.
+
+After session 1 they're off. `START_HERE.md` walks them through what to do once Claude says hi.
 
 ---
 
