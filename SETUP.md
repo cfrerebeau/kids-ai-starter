@@ -102,18 +102,75 @@ If missing:
 - Windows: https://www.python.org/downloads/ — **check "Add Python to PATH"** during install.
 - Linux: `sudo apt install python3 python3-pip`.
 
-## Step 7 — Clone the kid's new repo
+## Step 7 — Sign into GitHub and clone the kid's repo
 
-1. On GitHub, on the kid's new repo, click the green **Code** button → copy the HTTPS URL.
-2. In a terminal:
-   ```
-   git clone <the-url>
-   cd <repo-name>
-   code .
-   ```
-   `code .` opens the folder in VS Code.
+The kid's repo is private. Git needs to know who's allowed in. The easy path is letting VS Code handle the auth (it stores credentials in the system keychain and reuses them for every git operation).
 
-   *On Mac, if `code .` says "command not found"*: open VS Code → Command Palette (`Cmd+Shift+P`) → type "Shell Command: Install 'code' command in PATH" → run it. Then retry.
+### 7a. Sign into GitHub from VS Code
+
+1. Open VS Code.
+2. Click the **Accounts** icon — the little silhouette at the bottom-left of the VS Code window.
+3. Click **Sign in with GitHub to use GitHub features**.
+4. A browser opens. Sign into the GitHub account that has access to the kid's new repo.
+5. Authorize VS Code. The browser redirects back. Done — VS Code is signed in.
+
+**Which GitHub account to use?** Any of these is fine; pick what fits your situation:
+
+- **Kid's own account** (cleanest): the kid has their own GitHub account (13+ per ToS, parental consent under 18 in many places), the repo is on their account, and they sign in as themselves.
+- **Kid's account, parent owns the repo**: repo on your account, kid added as a collaborator → kid signs in as themselves. Their access is scoped to that repo only.
+- **Parent signs in on the kid's machine**: simplest if the kid isn't ready for their own account. Just be aware they'll see your other private repos in VS Code's source-control UI. Fine for a shared family machine; less fine if you have sensitive work repos in there.
+
+You can also switch later — sign out of VS Code, sign back in as a different account when the kid gets their own.
+
+### 7b. Set the kid's git identity (for commits)
+
+So commits show up as the kid, not as "unknown." Open a terminal:
+
+```
+git config --global user.name "Kid's Name"
+git config --global user.email "kid-email@example.com"
+```
+
+Use the same email that's on their GitHub account if they have one (otherwise commits won't be linked to their profile).
+
+### 7c. Clone the repo
+
+Two ways. Pick whichever you prefer — both use the VS Code sign-in.
+
+**Way A — from VS Code (no terminal):**
+
+1. `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux) → type **"Git: Clone"** → Enter.
+2. Paste the HTTPS URL of the kid's repo (green **Code** button on the repo page → copy HTTPS).
+3. Pick a folder on disk to clone into.
+4. When VS Code asks, click **"Open"**.
+
+**Way B — from the terminal:**
+
+```
+git clone <the-https-url>
+cd <repo-name>
+code .
+```
+
+If git prompts for credentials and your VS Code sign-in doesn't auto-fill, Git Credential Manager pops a browser window — sign in there.
+
+*On Mac, if `code .` says "command not found"*: open VS Code → Command Palette (`Cmd+Shift+P`) → type **"Shell Command: Install 'code' command in PATH"** → run it. Then retry.
+
+### Verify auth works
+
+In the cloned folder, run:
+
+```
+git pull
+```
+
+If it succeeds without asking for a password, auth is set up. If it asks every time, the credential helper didn't take — see "Troubleshooting auth" below.
+
+### Troubleshooting auth
+
+- **Repeatedly asked for password**: git isn't finding the saved credentials. On Mac, run `git config --global credential.helper osxkeychain`. On Windows, the Git for Windows installer sets up Credential Manager automatically. On Linux, `git config --global credential.helper "cache --timeout=86400"` will cache for 24h.
+- **"Permission denied" / "Repository not found"**: the signed-in account doesn't have access. Check on GitHub that the kid (or whichever account) is a collaborator on the repo, or that they own it.
+- **Two-factor authentication issues**: VS Code's GitHub sign-in handles 2FA automatically. If you're using `gh` CLI or PAT instead, you'll need a token instead of a password.
 
 ## Step 8 — Sit with the kid for session 1
 
