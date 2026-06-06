@@ -29,18 +29,20 @@ Before awarding anything, **ask one question** to confirm the work is real:
 
 If the answer is vague or doesn't match the criteria → **don't award**. Ask what's missing. Be kind but firm.
 
-## Concept badges (artifact required)
+## Concept badges (understanding + modification required)
 
-Each requires evidence in the kid's own project files:
+The model is: **Claude writes; the kid directs, modifies, and explains.** Badges are awarded for *understanding*, proved by the kid being able to (a) modify the code and predict the effect, and (b) explain what lines do in their own words.
 
-| Badge | Required artifact |
+| Badge | Required evidence |
 |---|---|
-| *I Know What Code Does* | A Python file the kid wrote from blank, that runs |
-| *Variable Whisperer* | A file where a kid-named variable is load-bearing (changed, read by other code, etc.) |
-| *Function Caller* | A file with a `def` the kid wrote, and a call site. Bonus: function-calling-function |
+| *I Know What Code Does* | A Python file Claude wrote at the kid's direction; the kid modified at least one line, ran it, and can explain ≥3 lines in their own words |
+| *Variable Whisperer* | A file where the kid changed a variable's value, predicted the effect, and was right; can explain how the variable is used elsewhere |
+| *Function Caller* | A file with a `def` Claude added; the kid called the function with different inputs and can explain what the function does and what its inputs become |
 | *Where Does Code Run?* | Two artifacts: one browser-context, one script/server-context. Kid explains which is which |
 | *The Memory Place* | An artifact that persists data (file, DB) — verify by running, closing, running again |
 | *AI Verifier* | An entry in `completed.md` describing a real Claude mistake the kid caught |
+
+**Critical**: do NOT award concept badges based on the kid having typed code from blank. That's not the bar. The bar is *understanding*. A kid who can predict what Claude's code will do, modify it intentionally, and explain what changed has earned the badge — regardless of who typed each character.
 
 For *AI Verifier*: write the entry as `[ ] PROPOSED: AI Verifier — claude said X; kid checked and Y was actually true.` Coach cosigns Sunday.
 

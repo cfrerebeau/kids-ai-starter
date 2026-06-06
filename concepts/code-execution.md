@@ -27,10 +27,13 @@ Lots of mysterious behavior is actually just "the steps ran in a different order
 
 ## How to earn the badge — *I Know What Code Does*
 
-Write a Python file from a blank file (not by modifying `hello.py`). It can do anything — print three lines, do one math problem, ask your name. The only rules:
+**Claude writes the script. You direct it and explain it.** That's the whole model in this program — Claude is the typist, you are the brain.
 
-- You start with an empty file.
-- You wrote every line yourself.
-- You ran it. It worked.
+To earn this badge:
 
-Show Claude. Run it together.
+- Ask Claude to write a small Python script that does something *you* decided (print a list, count something, ask you a question, anything).
+- Read what Claude wrote. **Have Claude walk you through it line by line.**
+- Change one line yourself — a value, a name, a piece of text. Run it again. Predict what's going to be different before you run it.
+- Explain in your own words what each line does, and why your change had the effect it did.
+
+The badge is for **understanding**, not for typing. You don't have to write code from a blank file. Reading Claude's code, predicting what it'll do, and proving you can predict — that's the win.

@@ -38,14 +38,14 @@ The full game. Browse it whenever you want.
 
 ## Concept badges (6)
 
-Earn by making something in your own project files.
+Earn by **understanding** code, proved by modifying it and explaining it. Claude writes, you direct and explain. The badge is for the *understanding*, not for who typed each character.
 
 | Badge | How to earn |
 |---|---|
-| *I Know What Code Does* | Write a Python file from scratch that runs (not modifying an existing template) |
-| *Variable Whisperer* | Use a variable you named yourself, in a way the program depends on |
-| *Function Caller* | Write a function and call it. Bonus: a function calling another function |
-| *Where Does Code Run?* | Build one thing in a browser AND one thing in a script. Show both. |
+| *I Know What Code Does* | Claude writes a Python script at your direction; you modify a line, run it, and can explain what each line does |
+| *Variable Whisperer* | Change a variable's value in your code, predict the effect before running, explain how it's used |
+| *Function Caller* | Have Claude add a function to your code; you call it with different inputs and can explain what it does |
+| *Where Does Code Run?* | Build one thing in a browser AND one thing in a script. Explain which is which |
 | *The Memory Place* | Build something that persists across runs (a file, a DB — anything) |
 | *AI Verifier* | Find and record one Claude output that was wrong (coach cosigns) |
 

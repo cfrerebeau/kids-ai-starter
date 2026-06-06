@@ -42,8 +42,11 @@ The variable `i` takes a different value each time. That's the magic — variabl
 
 ## How to earn the badge — *Variable Whisperer*
 
-In a file *you* wrote (not a template), use a variable that **the program depends on**. Not just a value you set once — a value that changes, or that other lines read from.
+Ask Claude to write a small script that uses a variable in a way that **matters** — a value that changes, or that other lines read from. You decide what the variable should be called and what it stores.
 
-Example: a script that asks the user a number, stores it in a variable, then prints something based on it. Or a loop that builds up a list.
+Then:
+- Read the code with Claude. Have them point at the variable each time it shows up.
+- Change the variable's starting value yourself. Predict what'll be different. Run it. Were you right?
+- Bonus: rename the variable to something different across the whole file — see if the program still works the same.
 
-Show Claude.
+The badge is for *understanding what the variable does* and *predicting how changes ripple through* — not for writing from scratch.

@@ -1,45 +1,49 @@
 # python-hello
 
-**Goal**: the kid writes a Python file *from scratch* (empty file, not a template) that runs. Earns *I Know What Code Does*.
+**Goal**: the kid asks you (Claude) to write a small Python script for something they care about. You write it. They read it, modify one piece, run it, and explain what each line does. Earns *I Know What Code Does*.
+
+**The model is: Claude writes, kid directs.** Do NOT make the kid type Python from a blank file. That's unrealistic this early. The kid is the brain; you're the typist.
 
 ## Sequence
 
-1. Ask what they want their script to do. Anything. "Print my name 5 times." "Tell me a joke." "Add two numbers." Resist suggesting — let them pick something dumb if they want.
-2. Have them create the file themselves: `touch my_first.py` or just create it in their editor. **You don't create it.**
-3. Have them type the first line. Wait. Ask "ready for the next?"
-4. After 3–5 lines, have them save and run it: `python my_first.py`.
-5. They report back what happened.
-6. If it broke: read the error together. Ask "what does that line literally say?" Then walk through.
-7. If it worked: name what just happened in one sentence (e.g. "the computer just executed 4 instructions in order — that's code execution"). Link `concepts/code-execution.md`. Offer the badge.
+1. **Ask what they want their script to do.** Anything small. "Print my favorite 5 songs." "Tell me how many days until summer." "Ask my name and say hi back." Resist suggesting — let them pick something dumb if they want, as long as it's *theirs*.
+
+2. **Write the script for them.** Use the Write tool. ≤10 lines if possible. Pick variable names and structure that fit what they asked. Leave ONE meaningful TODO they'll fill in (e.g. `# TODO(you): change this list to YOUR top 5`).
+
+3. **Walk them through it line by line.** Read each line out loud (in chat). Say what it does in plain English. Don't dump the explanation all at once — go line, ask "does that make sense?", continue.
+
+4. **Have them fill in the TODO.** They make the change themselves. Their hands on the keyboard for that one bit.
+
+5. **Have them run it.** `python their_script.py`. They tell you what came out.
+
+6. **Have them change one MORE thing on their own** — without asking you. A number, a string, anything. Predict what'll happen. Run again. Were they right?
+
+7. **Now ask them to explain it back.** Pick a random line. "What does this line do?" If they can explain → propose the *I Know What Code Does* badge.
 
 ## TODO discipline
 
-If they ask you to write the file for them, leave a TODO so they have to type at least one line themselves before it runs. Example:
-
-```python
-# A simple script.
-
-# TODO(you): change this to your name
-name = ""
-
-print("Hi,", name)
-```
+Always one TODO. Never more than ~10 lines for the first script. The kid's brain bandwidth is limited; you're not building production software.
 
 ## When to award *I Know What Code Does*
 
 Conditions:
-- The kid wrote the file from an empty file (not by editing `tinker/hello.py`).
-- They wrote every line themselves (you may have answered "how do I print" type questions, but the typing was theirs).
-- It ran. Output appeared.
+- Claude wrote the script; the kid directed what it should do.
+- The kid filled in the TODO and made at least one additional change on their own.
+- They can explain what at least 3 lines of the script do, in their own words.
 
-If yes: write to `quests/completed.md` and update `me.json.concept_badges` with the badge ID `code-execution`, the timestamp, and the path to their file as evidence.
+If yes: write to `quests/completed.md`, update `me.json.concept_badges` with the badge ID `code-execution`, timestamp, and the path to the script file as evidence.
 
 ## Sycophancy check
 
-If they say "ok cool what's next" after running their script — pause. "Look at the output. Read it out loud. Does it match what you thought would happen?" Make them slow down once.
+If they run the script and immediately say "cool what's next" — pause. Pick a random line. "Quick — what does this line do?" If they can't, that's the work. Stay here.
 
 ## Common pitfalls
 
 - `python` vs `python3` — try both. If neither works, parent-flag (Python install).
 - File saved with `.txt` extension by mistake — check.
 - Indentation errors — explain that Python cares about whitespace.
+- Kid wants to add a feature immediately — fine, but make them predict first what'll change. Run before believing.
+
+## What this teaches
+
+**That code is editable.** That you can read it, predict what it'll do, change one piece, and the rest still works. That understanding ≠ typing. The kid leaves with the confidence that they can work with code that someone else (or some AI) wrote — which is what 90% of programming actually is.

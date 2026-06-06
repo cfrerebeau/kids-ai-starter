@@ -37,6 +37,12 @@ This is how big programs get built: small functions, each doing one clear thing,
 
 ## How to earn the badge — *Function Caller*
 
-Write a function (with `def`) in your own code. Call it. Show Claude.
+Ask Claude to add a function (a `def` block) to your code that does one specific thing *you* picked — like "make a function that says hi to anyone whose name I pass in." Then:
 
-**Bonus**: write a function that calls another function. Same badge, extra respect.
+- Read the `def` with Claude. Have them point at the input(s) and what the function returns.
+- Call the function yourself, with different inputs, in different lines. Predict the output each time before running.
+- Try renaming the function — see what breaks, fix it.
+
+**Bonus**: ask Claude to add a SECOND function that calls the first one. Walk through what happens step by step when you run it.
+
+The badge is for being able to *use functions and explain them* — not for typing `def` from scratch.
