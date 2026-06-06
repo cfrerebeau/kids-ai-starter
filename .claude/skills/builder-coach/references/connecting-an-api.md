@@ -34,12 +34,13 @@ Before integrating into the app, have the kid write a tiny standalone script tha
 
 ```python
 # TODO(you): change the URL to the real one for your API.
-import urllib.request, json
+import urllib.request
+import json
 
 URL = "https://api.example.com/something"
 
-with urllib.request.urlopen(URL) as r:
-    data = json.loads(r.read())
+response = urllib.request.urlopen(URL)
+data = json.loads(response.read())
 
 print(data)
 ```
