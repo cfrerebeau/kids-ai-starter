@@ -24,5 +24,10 @@ venv/
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
+
+# VS Code: ignore most, but ship a couple of opinionated defaults
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
 *.swp

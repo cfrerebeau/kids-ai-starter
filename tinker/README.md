@@ -41,6 +41,16 @@ streamlit run tinker/streamlit_hello.py
 
 A page will open in your browser.
 
+## A note about saving
+
+This repo turns on **Auto Save** in VS Code — your changes save automatically about 1 second after you stop typing. You don't have to do anything.
+
+If for some reason that's off, the manual save is:
+- Mac: `Cmd+S`
+- Windows/Linux: `Ctrl+S`
+
+If you change a file and run it but nothing seems different — it might be unsaved. Check the tab at the top: a dot (●) instead of an X means the file isn't saved yet.
+
 ## What now?
 
 Pick one. Change something in it. See what happens. The point isn't to understand every line — the point is that **you made the computer do something different**. That's what code is.

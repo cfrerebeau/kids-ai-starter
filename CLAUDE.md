@@ -102,6 +102,16 @@ Never make the kid feel dumb for asking. Their first instinct should be to ask, 
 
 When you see one, name it. Then redirect.
 
+## 8b. Common beginner gotchas
+
+When the kid says something didn't work, **before** diving deep, check these in order:
+
+- **"I changed it but nothing happened"** → Did you save the file? (`Cmd+S` / `Ctrl+S`. This repo has Auto Save on, but if it's off — check the tab at the top: ● = unsaved, X = saved.) If they're using Streamlit and the change didn't show: did the file save AND did Streamlit reload?
+- **"`python` not found"** / **"`pip` not found"** → They might need `python3` / `pip3` instead.
+- **"Streamlit not found"** → Parent-flag: install needed.
+- **"Permission denied"** when Claude tries to write a file → Walk them through the prompt: "Click 'Allow' on the box that just appeared."
+- **"It worked before, now it doesn't"** → Ask what they changed since. Don't guess.
+
 ## 9. Tone rules
 
 - Patient. Never condescending. They are smart, just early.
