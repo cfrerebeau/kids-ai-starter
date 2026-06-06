@@ -2,7 +2,75 @@
 
 This is a starter kit that helps your kid (~12–16) build a real, publicly-shipped AI app, with Claude Code as the day-to-day coach. You are the sponsor, the weekly reviewer, and the safety layer.
 
-Aim to spend ~30 minutes upfront and ~30 minutes/week.
+Aim to spend ~30 minutes upfront (one-time setup, Section 0) and ~30 minutes/week after that.
+
+---
+
+## 0. One-time setup (do this before the kid touches anything)
+
+This is the only heavy lift. After this, everything is in-flow.
+
+### a. Create the kid's repo from this template
+
+1. Go to https://github.com/cfrerebeau/kids-ai-starter (the source repo).
+2. Click **"Use this template"** → **"Create a new repository"**.
+3. Pick an owner: yourself, or the kid's GitHub account (if they have one — needs to be 13+; under 18 needs parental consent per GitHub ToS).
+4. Name it whatever the kid wants. `my-first-app`, `bird-thing`, doesn't matter.
+5. **Set visibility to Private.** This is important — the kid will commit progress here, and private keeps WIP off the public internet.
+6. Click Create.
+
+If the source repo doesn't have "Use this template" available, fork it instead, then go to Settings → Change visibility → Private.
+
+### b. Install VS Code on the kid's machine
+
+- Download from https://code.visualstudio.com/ (free, official).
+- Install with default settings.
+
+### c. Install Node.js (needed for Claude Code)
+
+- Download the **LTS** version from https://nodejs.org/.
+- Install with default settings.
+- Verify: open a terminal and type `node --version` — you should see a version number.
+
+### d. Install Claude Code
+
+In a terminal:
+
+```
+npm install -g @anthropic-ai/claude-code
+```
+
+Verify with:
+
+```
+claude --version
+```
+
+(Alternative: official installer at https://claude.com/download — handles npm and PATH setup for you.)
+
+### e. Sign Claude Code in
+
+Run `claude` once yourself. It will prompt you to sign in. Two options:
+
+- **Claude Pro or Max subscription** (recommended for daily kid usage — flat monthly fee, no token metering anxiety).
+- **API key** from https://console.anthropic.com — pay per token. If you go this route, set a monthly budget alert (Section 3).
+
+Sign in with whichever you choose. Then exit (`Ctrl+C` or type `exit`).
+
+### f. Clone the kid's new repo and open in VS Code
+
+1. On GitHub, on the kid's new repo, click the green **Code** button → copy the HTTPS URL.
+2. In a terminal:
+   ```
+   git clone <the-url>
+   cd <repo-name>
+   code .
+   ```
+   `code .` opens the folder in VS Code.
+
+### g. Hand it over
+
+The kid opens VS Code (if not already), opens a terminal inside it (`View → Terminal` or `` Ctrl+` ``), and types `claude`. They take it from here — `START_HERE.md` tells them what to do.
 
 ---
 
@@ -17,6 +85,7 @@ Aim to spend ~30 minutes upfront and ~30 minutes/week.
 ## 2. What you're being asked to do (checklist)
 
 - [ ] Read this file in full before the kid starts.
+- [ ] Complete Section 0 (one-time setup: template repo, VS Code, Node, Claude Code).
 - [ ] Install Python 3 on their machine if not installed (`python3 --version` to check).
 - [ ] Set a monthly budget alert on the Anthropic console (suggested: $30/mo to start).
 - [ ] Be available to install Streamlit when they get there (one terminal command, ~30s).

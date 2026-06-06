@@ -2,13 +2,22 @@
 
 Hey. You're about to build something real, with Claude as your coach.
 
+## Before you start
+
+A grown-up needs to have done the one-time setup in `PARENTS.md`. If you're seeing this in VS Code and Claude Code is installed, you're good.
+
+If `claude` doesn't work in the terminal, that's a grown-up thing — show them this screen.
+
 ## Step 1
 
-Make sure a grown-up has read `PARENTS.md`. That's the only adult part.
+In VS Code, open the terminal:
+
+- Menu: **View → Terminal**, or
+- Shortcut: `` Ctrl+` `` (Windows/Linux) or `` Cmd+` `` (Mac)
 
 ## Step 2
 
-Open a terminal in this folder and type:
+In the terminal, type:
 
 ```
 claude
