@@ -2,5 +2,10 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.formatOnSave": false,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+
+  "editor.inlineSuggest.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  }
 }

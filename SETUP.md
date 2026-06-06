@@ -172,6 +172,19 @@ If it succeeds without asking for a password, auth is set up. If it asks every t
 - **"Permission denied" / "Repository not found"**: the signed-in account doesn't have access. Check on GitHub that the kid (or whichever account) is a collaborator on the repo, or that they own it.
 - **Two-factor authentication issues**: VS Code's GitHub sign-in handles 2FA automatically. If you're using `gh` CLI or PAT instead, you'll need a token instead of a password.
 
+## Step 7.5 — If inline AI autocomplete still appears, disable it
+
+The repo ships with `editor.inlineSuggest.enabled: false` in `.vscode/settings.json`. That covers most cases — no gray "ghost text" suggesting code as the kid types.
+
+**If you still see autocomplete suggestions appearing** (some Claude Code extension versions or other AI extensions override the workspace setting):
+
+1. VS Code → **Settings** (`Cmd+,` / `Ctrl+,`).
+2. Search for "inline suggest" and uncheck it at the **User** level (not just Workspace).
+3. If the Claude Code extension has its own "Enable inline completions" toggle in its extension settings page, turn that off too.
+4. Disable any other AI completion extension (Copilot, Tabnine, Codeium) — for a kid learning to type, watching gray ghost text appear is confusing and short-circuits learning.
+
+The point: when the kid types, they should see *only what they typed*. Claude helps via the panel/terminal, not by predicting their next keystroke.
+
 ## Step 8 — Sit with the kid for session 1
 
 **Plan to be next to the kid for their first session (~15 minutes).** Not because they can't do it — because:
