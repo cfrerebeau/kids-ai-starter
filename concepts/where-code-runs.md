@@ -1,30 +1,63 @@
 # Where Does Code Run?
 
-## Two places
+## The two roles: client and server
 
-Code can run in two main places. They behave very differently. Knowing which is which is one of the most useful things you'll learn.
+Almost every real app on the internet has two parts that talk to each other.
 
-### 1. In your browser ("client-side")
+- **Client** = the program in front of the user. For a website, that's their **browser** — Chrome, Safari, whatever they're using. Every person using your app has their own client. Their own browser, their own screen, their own tab.
+- **Server** = one place, somewhere on the internet, that holds your app's code and data. Just *one*. Every client (every user) connects to the same server.
 
-When you open `tinker/hello.html`, your browser reads the HTML and the JavaScript inside it. The code runs **on your machine, inside the browser tab**.
+## The picture
 
-- Fast — no internet round trip.
-- Anyone using your app can see your code (right-click → "View source").
-- **Not secure for secrets.** Never put an API key or password in browser-side code. Anyone can read it.
-- Things you do here disappear when the tab closes (unless you do extra work).
+```
+       CLIENTS                              SERVER
+   (each user's browser)               (one place, on the internet)
 
-### 2. On a server ("server-side")
+   User A  ─────── request ────────►
+                                          [ your app code ]
+            ◄────── response ────────     [ your data ]
+                                            ↑
+                                            │  every user
+   User B  ─────── request ────────►        │  hits the same
+                                            │  server
+            ◄────── response ────────     [ same code ]
+                                          [ same data ]
+   User C  ─────── request ────────►
+            ◄────── response ────────     [ same server ]
+```
 
-When you run `python tinker/api_demo.py`, the code runs **on your computer as a script**. When you ship a Streamlit or Supabase app, the code runs on a server you don't see. Users hit it over the internet.
+Every time a user clicks something, their browser sends a **request** to the server. The server reads it, does whatever your code says, and sends back a **response**. The browser shows the result.
 
-- Slower (network).
-- **Secrets are safe** here — users can't see the code.
-- You can keep data across users (in a database).
+## One server, many clients — why that matters
 
-## Why this matters
+The asymmetry is the whole point.
 
-Building a real app means knowing which work happens where. A login form goes through the server (so passwords stay private). A button animation runs in the browser (because it's just visuals). Putting a password check in the browser is a beginner mistake — and a real security problem.
+- Each client only knows about itself. User A's browser has no idea User B exists.
+- The server sees all of them. It's the only place that can know what's happening across users.
+
+So if your app needs to **remember things between users** (User A submits something, User B sees it) — that has to live on the server. The browser alone can't do that. Each browser is alone.
+
+## Why every real app needs both
+
+- A **browser-only app** (just HTML + JavaScript): cool, fast, but can't share data between users. Once you close the tab, your work's gone.
+- A **server-only app** (just Python on a server): does work, but has no way for a user to see or click anything. You'd have to read its output somewhere else.
+
+Real apps mix the two: the browser provides what the user sees and clicks (the *UI*); the server provides what's the same across users (the *shared state*) and what needs to be safe (passwords, keys, anything secret).
+
+## When the kid will care about this
+
+- **First Streamlit app**: Streamlit runs *on a server*, but the user sees and clicks things *in their browser*. The two roles are at play even in your tiny first app.
+- **First time saving data**: now you need the server to remember (database).
+- **First time something has to be secret** (an API key, a password): it has to live on the server. Anything in the browser is visible to anyone who looks.
 
 ## How to earn the badge — *Where Does Code Run?*
 
-Build **one thing in a browser context** (HTML/JS, or a Streamlit widget rendering in the page) AND **one thing in a script/server context** (a Python script, or a Streamlit backend function). Show Claude both. Explain which runs where.
+Build **one thing that runs in a browser** (an HTML file the kid wrote, or a piece of JavaScript in `hello.html` the kid modified) AND **one thing that runs as a server-side script** (a Python file they wrote, or a Streamlit app). Show Claude both. **Explain in their own words which is which, and what would happen if you tried to do it the other way around** (e.g. "I couldn't put my API key in `hello.html` because then everyone could see it").
+
+The badge isn't for owning both files — it's for being able to *explain the difference*.
+
+## Going deeper (optional)
+
+Some kids will want to actually **wire their own HTML up to their own Python**, not let Streamlit hide it. That's a real path — write a Python web server (FastAPI or Flask), write an HTML file with JavaScript that calls it (`fetch()`), and watch the two talk to each other.
+
+It's more work than Streamlit but teaches the wiring directly. If the kid asks "how do I make MY html call MY python," that's the path. Tell Claude — there's room to go down that route.
