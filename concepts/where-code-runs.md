@@ -55,9 +55,3 @@ Real apps mix the two: the browser provides what the user sees and clicks (the *
 Build **one thing that runs in a browser** (an HTML file the kid wrote, or a piece of JavaScript in `hello.html` the kid modified) AND **one thing that runs as a server-side script** (a Python file they wrote, or a Streamlit app). Show Claude both. **Explain in their own words which is which, and what would happen if you tried to do it the other way around** (e.g. "I couldn't put my API key in `hello.html` because then everyone could see it").
 
 The badge isn't for owning both files — it's for being able to *explain the difference*.
-
-## Going deeper (optional)
-
-Some kids will want to actually **wire their own HTML up to their own Python**, not let Streamlit hide it. That's a real path — write a Python web server (FastAPI or Flask), write an HTML file with JavaScript that calls it (`fetch()`), and watch the two talk to each other.
-
-It's more work than Streamlit but teaches the wiring directly. If the kid asks "how do I make MY html call MY python," that's the path. Tell Claude — there's room to go down that route.
