@@ -4,27 +4,30 @@ Hey. You're about to build something real, with Claude as your coach.
 
 ## Before you start
 
-A grown-up needs to have done the one-time setup in `PARENTS.md`. If you're seeing this in VS Code and Claude Code is installed, you're good.
+A grown-up needs to have done the one-time setup ([SETUP.md](SETUP.md)). If you're seeing this in VS Code and Claude Code is installed, you're good.
 
-If `claude` doesn't work in the terminal, that's a grown-up thing — show them this screen.
+If anything below doesn't work, show this screen to your coach.
 
-## Step 1
+## Two ways to talk to Claude
 
-In VS Code, open the terminal:
+It depends which one the grown-up installed:
 
-- Menu: **View → Terminal**, or
-- Shortcut: `` Ctrl+` `` (Windows/Linux) or `` Cmd+` `` (Mac)
+### A) The Claude Code panel in VS Code (the easier way)
 
-## Step 2
+1. Look at the left sidebar in VS Code. There should be a Claude icon. Click it.
+2. A chat panel opens on the side. Type "hi" and hit enter.
 
-In the terminal, type:
+### B) The terminal (`claude` command)
 
-```
-claude
-```
+1. Open the terminal: **View → Terminal**, or `` Ctrl+` `` (Windows/Linux) / `` Cmd+` `` (Mac).
+2. In the terminal, type:
+   ```
+   claude
+   ```
+3. Hit enter. Claude starts up.
 
-## Step 3
+## What happens next
 
-When Claude says hi, just answer. It'll ask 2 questions, then have you run something cool. After that you're off.
+Either way: Claude will say hi and ask 2 short questions. Then it'll have you run something cool. After that you're off.
 
-That's it. No setup, no syllabus, no quiz. See you in the terminal.
+No setup, no syllabus, no quiz. See you in there.

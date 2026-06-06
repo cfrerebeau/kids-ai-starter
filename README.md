@@ -11,11 +11,9 @@ For kids ~12–16 and a parent who can sponsor the journey. The repo guides you 
 
 ## Quickstart
 
-1. **Parent:** read `PARENTS.md` first — Section 0 walks through the one-time setup.
-2. **Parent:** click **"Use this template"** on this repo's GitHub page → create the kid's private copy.
-3. **Parent:** install VS Code + Claude Code on the kid's machine (steps in `PARENTS.md` Section 0).
-4. **Kid:** clone their new repo, open in VS Code, open `START_HERE.md`.
-5. **Kid:** in the VS Code terminal, type `claude`. Claude takes it from there.
+1. **Parent**, one-time (~1 hour): work through [SETUP.md](SETUP.md) — Git, VS Code, Claude Code, template the repo private, sign in.
+2. **Parent**, read [PARENTS.md](PARENTS.md) — the ongoing role.
+3. **Kid**: open [START_HERE.md](START_HERE.md) in VS Code. It tells you exactly what to do.
 
 ## What you'll build
 
